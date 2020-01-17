@@ -10,3 +10,26 @@ describe('Render without crashing', () => {
   });
 })
 
+describe('Strikes header renders', () => {
+    test('Strikes header is found', () => {
+    const { getByTestId } = render(<App />)
+
+    getByTestId(/strikes-header/i)
+  })
+})
+
+describe('Fouls header renders', () => {
+  test('Fouls header is found', () => {
+  const { getByTestId } = render(<App />)
+
+  getByTestId(/fouls-header/i)
+})
+})
+
+describe('Balls header renders', () => {
+  test('Balls header is found', () => {
+  const { getByTestId } = render(<App />)
+
+  getByTestId(/balls-header/i)
+})
+})
